@@ -6,7 +6,6 @@ public class BST<K extends Comparable<K>, V> {
         private K key;
         private V value;
         private Node left, right;
-
         // Constructor for creating a new node with a key-value pair
         public Node(K key, V value) {
             this.key = key;
