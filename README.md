@@ -6,3 +6,5 @@ STEP 1: I started creating of BST class, first step was initializing private roo
 STEP 2: Adding constructor for creating a new node with a key-value pair by using "this"
 
 STEP 3: Creating of put() method. I created put method with helper method putRecursive() to call it. And put here any statements as if the current node is null, create a new node with the given key and value. Then program should compare the given key with the key of the current node. If given is less than current, traverse to the left subtree. If more, traverse to the right subtree.
+
+STEP 4: Creating of get() method. I created this method also with helper one which calls getRecursive(). Used statementts as if current node is null, Key not found, return null or throw an exception depending on the desired behavior. Int cmp help us to compare key with current key, and if Key is smaller, search in the left subtree, if greater, search in the right.
