@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 2: Adding constructor">
+    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 3: Creating of put() method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684412434513</updated>
-      <workItem from="1684412435781" duration="3449000" />
+      <workItem from="1684412435781" duration="4136000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST: creating BTS">
       <created>1684412820128</created>
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684413889188</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="STEP 3: Creating of put() method">
+      <created>1684417802025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417802025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,7 @@
     <MESSAGE value="FIRST: creating BTS" />
     <MESSAGE value="STEP 1: Creating of BTS class and adding inner class." />
     <MESSAGE value="STEP 2: Adding constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="STEP 2: Adding constructor" />
+    <MESSAGE value="STEP 3: Creating of put() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="STEP 3: Creating of put() method" />
   </component>
 </project>

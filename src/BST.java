@@ -41,5 +41,30 @@ public class BST<K extends Comparable<K>, V> {
         // Return the updated or newly created node
         return currentNode;
     }
+    //Creating get() method
+    public V get(K key) {
+        return getRecursive(root, key);
+    }
+
+    private V getRecursive(Node currentNode, K key) {
+        if (currentNode == null) {
+            // Key not found, return null or throw an exception depending on the desired behavior
+            return null;
+        }
+
+        int cmp = key.compareTo(currentNode.key);
+
+        if (cmp < 0) {
+            // Key is smaller, search in the left subtree
+            return getRecursive(currentNode.left, key);
+        } else if (cmp > 0) {
+            // Key is greater, search in the right subtree
+            return getRecursive(currentNode.right, key);
+        } else {
+            // Key found, return the value associated with the key
+            return currentNode.value;
+        }
+    }
+
 
 }
