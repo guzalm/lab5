@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 1: Creating of BTS class and adding inner class." />
+    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 2: Adding constructor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684412434513</updated>
-      <workItem from="1684412435781" duration="1354000" />
+      <workItem from="1684412435781" duration="3449000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST: creating BTS">
       <created>1684412820128</created>
@@ -66,7 +69,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684413646072</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="STEP 2: Adding constructor">
+      <created>1684413853742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684413853742</updated>
+    </task>
+    <task id="LOCAL-00004" summary="STEP 2: Adding constructor">
+      <created>1684413889187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684413889188</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FIRST: creating BTS" />
     <MESSAGE value="STEP 1: Creating of BTS class and adding inner class." />
-    <option name="LAST_COMMIT_MESSAGE" value="STEP 1: Creating of BTS class and adding inner class." />
+    <MESSAGE value="STEP 2: Adding constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="STEP 2: Adding constructor" />
   </component>
 </project>
