@@ -10,3 +10,5 @@ STEP 3: Creating of put() method. I created put method with helper method putRec
 STEP 4: Creating of get() method. I created this method also with helper one which calls getRecursive(). Used statementts as if current node is null, Key not found, return null or throw an exception depending on the desired behavior. Int cmp help us to compare key with current key, and if Key is smaller, search in the left subtree, if greater, search in the right.
 
 STEP 5: Creating of delete() method. I created put method with helper method deleteRecursive() to call it. There are also any statements like what it does when key is empty, in comparing to current node key is smaaller or greater, solvings of some situations as if there is no left or right child. And also used some other sub methods as findmin or deletemin, because to find the minimum key in the right subtree (or maximum key in the left subtree) and to delete the successor node from the right subtree.
+
+STEP 6: How I mentioned before, we need findMin() method to find the minimum key in a subtree rooted at the given node and delete it when Node has two children/
