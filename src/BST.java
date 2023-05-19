@@ -109,6 +109,14 @@ public class BST<K extends Comparable<K>, V> {
         // Return the updated node
         return currentNode;
     }
+    //Creating of findMin method
+    private Node findMin(Node node) {
+        // Find the minimum key in a subtree rooted at the given node
+        while (node.left != null) {
+            node = node.left;
+        }
+        return node;
+    }
 
 
 }
