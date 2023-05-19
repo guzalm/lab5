@@ -65,6 +65,50 @@ public class BST<K extends Comparable<K>, V> {
             return currentNode.value;
         }
     }
+    //Creating of delete() method
+    public void delete(K key) {
+        root = deleteRecursive(root, key);
+    }
+
+    private Node deleteRecursive(Node currentNode, K key) {
+        if (currentNode == null) {
+            // Key not found, return null or throw an exception depending on the desired behavior
+            return null;
+        }
+
+        int cmp = key.compareTo(currentNode.key);
+
+        if (cmp < 0) {
+            // Key is smaller, search in the left subtree
+            currentNode.left = deleteRecursive(currentNode.left, key);
+        } else if (cmp > 0) {
+            // Key is greater, search in the right subtree
+            currentNode.right = deleteRecursive(currentNode.right, key);
+        } else {
+            // Key found, perform deletion
+            if (currentNode.left == null) {
+                // Case 1: No left child
+                // Replace the current node with its right child
+                return currentNode.right;
+            } else if (currentNode.right == null) {
+                // Case 2: No right child
+                // Replace the current node with its left child
+                return currentNode.left;
+            } else {
+                // Case 3: Two children
+                // Find the minimum key in the right subtree (or maximum key in the left subtree)
+                Node successor = findMin(currentNode.right);
+                // Copy the successor's key and value to the current node
+                currentNode.key = successor.key;
+                currentNode.value = successor.value;
+                // Delete the successor node from the right subtree
+                currentNode.right = deleteMin(currentNode.right);
+            }
+        }
+
+        // Return the updated node
+        return currentNode;
+    }
 
 
 }
