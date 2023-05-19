@@ -117,6 +117,15 @@ public class BST<K extends Comparable<K>, V> {
         }
         return node;
     }
+    // deleteMin method() to delete child node when parent Node has 2 children
+    private Node deleteMin(Node node) {
+        // Delete the node with the minimum key in a subtree rooted at the given node
+        if (node.left == null) {
+            return node.right;
+        }
+        node.left = deleteMin(node.left);
+        return node;
+    }
 
 
 }
