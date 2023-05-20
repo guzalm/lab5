@@ -1,6 +1,7 @@
 import java.util.Iterator;
 import java.util.Stack;
-public class BST<K extends Comparable<K>, V> implements Iterable<K>{
+
+public class BST<K extends Comparable<K>, V> implements Iterable<K> {
     private Node root;
     private int size; // Variable to store the size of the BST
 
@@ -9,17 +10,20 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         private K key;
         private V value;
         private Node left, right;
+
         // Constructor for creating a new node with a key-value pair
         public Node(K key, V value) {
             this.key = key;
             this.value = value;
         }
     }
-    //Creating of put() method
+
+    //Creating put() method
     public void put(K key, V value) {
         // Call the recursive helper method to perform insertion
         root = putRecursive(root, key, value);
     }
+
     private Node putRecursive(Node currentNode, K key, V value) {
         // If the current node is null, create a new node with the given key and value
         if (currentNode == null) {
@@ -44,6 +48,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         // Return the updated or newly created node
         return currentNode;
     }
+
     //Creating get() method
     public V get(K key) {
         return getRecursive(root, key);
@@ -68,7 +73,8 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
             return currentNode.value;
         }
     }
-    //Creating of delete() method
+
+    //Creating delete() method
     public void delete(K key) {
         root = deleteRecursive(root, key);
     }
@@ -90,7 +96,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         } else {
             // Key found, perform deletion
             if (currentNode.left == null) {
-                size--;// Decrease the size when deleting a node
+                size--; // Decrease the size when deleting a node
                 // Case 1: No left child
                 // Replace the current node with its right child
                 return currentNode.right;
@@ -114,7 +120,8 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         // Return the updated node
         return currentNode;
     }
-    //Creating of findMin method
+
+    //Creating findMin method
     private Node findMin(Node node) {
         // Find the minimum key in a subtree rooted at the given node
         while (node.left != null) {
@@ -122,6 +129,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         }
         return node;
     }
+
     // deleteMin method() to delete child node when parent Node has 2 children
     private Node deleteMin(Node node) {
         // Delete the node with the minimum key in a subtree rooted at the given node
@@ -131,6 +139,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         node.left = deleteMin(node.left);
         return node;
     }
+
     // Iterator implementation
     private class BSTIterator implements Iterator<K> {
         private Node currentNode;
@@ -153,6 +162,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
             updateStack(node.right);
             return node.key;
         }
+
         // Helper method to update the stack with nodes in the left subtree
         private void updateStack(Node node) {
             while (node != null) {
@@ -164,11 +174,24 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
 
     @Override
     public Iterator<K> iterator() {
-
         return new BSTIterator();
     }
+
     // Method to get the size of the BST
     public int size() {
         return size;
+    }
+
+    // In-order traversal
+    public void inorderTraversal() {
+        inorderRecursive(root);
+    }
+
+    private void inorderRecursive(Node currentNode) {
+        if (currentNode != null) {
+            inorderRecursive(currentNode.left);
+            System.out.println(currentNode.key);
+            inorderRecursive(currentNode.right);
+        }
     }
 }

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 8: Adding Iterable&lt;K&gt; iterator()">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
-    </list>
+    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 9: Creating size() method and using it inside some other methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +52,7 @@
       <updated>1684412434513</updated>
       <workItem from="1684412435781" duration="5006000" />
       <workItem from="1684508971379" duration="1802000" />
-      <workItem from="1684551575779" duration="1405000" />
+      <workItem from="1684551575779" duration="2151000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST: creating BTS">
       <created>1684412820128</created>
@@ -134,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684552645301</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="STEP 9: Creating size() method and using it inside some other methods">
+      <created>1684553333470</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684553333470</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +166,7 @@
     <MESSAGE value="STEP 6: Creating of findMin() method" />
     <MESSAGE value="STEP 7: Creating of deleteMin() method" />
     <MESSAGE value="STEP 8: Adding Iterable&lt;K&gt; iterator()" />
-    <option name="LAST_COMMIT_MESSAGE" value="STEP 8: Adding Iterable&lt;K&gt; iterator()" />
+    <MESSAGE value="STEP 9: Creating size() method and using it inside some other methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="STEP 9: Creating size() method and using it inside some other methods" />
   </component>
 </project>
