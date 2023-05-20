@@ -11,4 +11,6 @@ STEP 4: Creating of get() method. I created this method also with helper one whi
 
 STEP 5: Creating of delete() method. I created put method with helper method deleteRecursive() to call it. There are also any statements like what it does when key is empty, in comparing to current node key is smaaller or greater, solvings of some situations as if there is no left or right child. And also used some other sub methods as findmin or deletemin, because to find the minimum key in the right subtree (or maximum key in the left subtree) and to delete the successor node from the right subtree.
 
-STEP 6: How I mentioned before, we need findMin() method to find the minimum key in a subtree rooted at the given node and delete it when Node has two children/
+STEP 6: How I mentioned before, we need findMin() method to find the minimum key in a subtree rooted at the given node and delete it when Node has two children.
+
+STEP 7: To delete the node with the minimum key in a subtree rooted at the given node, after finding the min by method findMin(), it should be deleted by another new method deleteMin() where we also used if statement to show if one of nodes is empty(null), it might return second node.
