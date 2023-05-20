@@ -19,7 +19,6 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         // Call the recursive helper method to perform insertion
         root = putRecursive(root, key, value);
     }
-
     private Node putRecursive(Node currentNode, K key, V value) {
         // If the current node is null, create a new node with the given key and value
         if (currentNode == null) {
