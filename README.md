@@ -16,3 +16,5 @@ STEP 6: How I mentioned before, we need findMin() method to find the minimum key
 STEP 7: To delete the node with the minimum key in a subtree rooted at the given node, after finding the min by method findMin(), it should be deleted by another new method deleteMin() where we also used if statement to show if one of nodes is empty(null), it might return second node.
 
 STEP 8: Adding Iterable<K> iterator().This interface requires the implementation of the iterator() method, which returns an instance of the Iterator<K> interface. Calling of the updateStack() method to push all the nodes of the left subtree onto the stack. hasNext() method checks if there are any more nodes to be processed, than returns true or false.
+  
+STEP 9: Creating size() method and using it inside some other methods. For example, inside of putRecursive() method I used size to increase it when new node was added. Also, in removeRecursive() method I used size-- statement to decreasee size of binary tree after removing some nodes.
