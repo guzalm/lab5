@@ -1,4 +1,6 @@
-public class BST<K extends Comparable<K>, V> {
+import java.util.Iterator;
+import java.util.Stack;
+public class BST<K extends Comparable<K>, V> implements Iterable<K>{
     private Node root;
 
     // Inner class representing a node in the binary search tree
@@ -126,6 +128,39 @@ public class BST<K extends Comparable<K>, V> {
         node.left = deleteMin(node.left);
         return node;
     }
+    // Iterator implementation
+    private class BSTIterator implements Iterator<K> {
+        private Node currentNode;
+        private Stack<Node> stack;
 
+        public BSTIterator() {
+            currentNode = root;
+            stack = new Stack<>();
+            updateStack(currentNode);
+        }
 
+        @Override
+        public boolean hasNext() {
+            return !stack.isEmpty();
+        }
+
+        @Override
+        public K next() {
+            Node node = stack.pop();
+            updateStack(node.right);
+            return node.key;
+        }
+
+        private void updateStack(Node node) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+        }
+    }
+
+    @Override
+    public Iterator<K> iterator() {
+        return new BSTIterator();
+    }
 }
