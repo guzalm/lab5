@@ -2,6 +2,7 @@ import java.util.Iterator;
 import java.util.Stack;
 public class BST<K extends Comparable<K>, V> implements Iterable<K>{
     private Node root;
+    private int size; // Variable to store the size of the BST
 
     // Inner class representing a node in the binary search tree
     private class Node {
@@ -22,6 +23,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
     private Node putRecursive(Node currentNode, K key, V value) {
         // If the current node is null, create a new node with the given key and value
         if (currentNode == null) {
+            size++;
             return new Node(key, value);
         }
 
@@ -88,10 +90,12 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
         } else {
             // Key found, perform deletion
             if (currentNode.left == null) {
+                size--;// Decrease the size when deleting a node
                 // Case 1: No left child
                 // Replace the current node with its right child
                 return currentNode.right;
             } else if (currentNode.right == null) {
+                size--; // Decrease the size when deleting a node
                 // Case 2: No right child
                 // Replace the current node with its left child
                 return currentNode.left;
@@ -149,7 +153,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
             updateStack(node.right);
             return node.key;
         }
-
+        // Helper method to update the stack with nodes in the left subtree
         private void updateStack(Node node) {
             while (node != null) {
                 stack.push(node);
@@ -160,6 +164,11 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K>{
 
     @Override
     public Iterator<K> iterator() {
+
         return new BSTIterator();
+    }
+    // Method to get the size of the BST
+    public int size() {
+        return size;
     }
 }
