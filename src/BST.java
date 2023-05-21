@@ -1,4 +1,4 @@
-import java.util.Iterator;
+impimport java.util.Iterator;
 import java.util.Map;
 import java.util.Stack;
 import java.util.AbstractMap.SimpleEntry;
@@ -195,5 +195,24 @@ public class BST<K extends Comparable<K>, V> implements Iterable<Map.Entry<K, V>
             System.out.println(currentNode.key);
             inorderRecursive(currentNode.right);
         }
+    }
+//Adding of main method to check our code
+    public static void main(String[] args) {
+        BST<Integer, String> tree = new BST<>();
+
+        tree.put(5, "Value 5");
+        tree.put(2, "Value 2");
+        tree.put(8, "Value 8");
+        tree.put(1, "Value 1");
+        tree.put(4, "Value 4");
+
+        // Iterate over the tree and print key-value pairs
+        for (Map.Entry<Integer, String> elem : tree) {
+            System.out.println("key is " + elem.getKey() + " and value is " + elem.getValue());
+        }
+
+        // Get the size of the tree
+        int treeSize = tree.size();
+        System.out.println("Size of the tree: " + treeSize);
     }
 }

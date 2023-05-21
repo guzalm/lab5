@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 10:  Implementing of in-order traversal for iterator()">
+    <list default="true" id="5c057d56-efce-45ad-80b8-e2f0cb39e634" name="Changes" comment="STEP 11: Make it possible for both key and value to be accessible during the iteration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +55,7 @@
       <workItem from="1684412435781" duration="5006000" />
       <workItem from="1684508971379" duration="1802000" />
       <workItem from="1684551575779" duration="3365000" />
+      <workItem from="1684679527621" duration="1578000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST: creating BTS">
       <created>1684412820128</created>
@@ -147,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684554153048</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="STEP 11: Make it possible for both key and value to be accessible during the iteration">
+      <created>1684680201559</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684680201559</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +185,7 @@
     <MESSAGE value="STEP 8: Adding Iterable&lt;K&gt; iterator()" />
     <MESSAGE value="STEP 9: Creating size() method and using it inside some other methods" />
     <MESSAGE value="STEP 10:  Implementing of in-order traversal for iterator()" />
-    <option name="LAST_COMMIT_MESSAGE" value="STEP 10:  Implementing of in-order traversal for iterator()" />
+    <MESSAGE value="STEP 11: Make it possible for both key and value to be accessible during the iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="STEP 11: Make it possible for both key and value to be accessible during the iteration" />
   </component>
 </project>
