@@ -22,3 +22,5 @@ STEP 9: Creating size() method and using it inside some other methods. For examp
 STEP 10: Implementation of in-order traversal for iterator().By implementing these methods, the iterator will traverse the binary search tree in in-order fashion, returning the keys of the nodes in ascending order.
   
 STEP 11: Making possible for both key and value to be accessible during the iteration. I have changed the class declaration line to implement Iterable<Map.Entry<K, V>> instead of just Iterable<K>. Then, updated the next() method in BSTIterator to create a new SimpleEntry<K, V> object using the key and value of the popped node from the stack. This way, the iterator returns a Map.Entry<K, V> object with both the key and value.
+
+  STEP 12: I have added main method to check how works previous methods. Fistly, I put 5 nodes to empty tree by using put() method, than I iterated over the tree and print key-value pairs. And last thing I checked the size of tree by size() method.
