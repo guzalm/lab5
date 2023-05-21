@@ -1,7 +1,9 @@
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Stack;
+import java.util.AbstractMap.SimpleEntry;
 
-public class BST<K extends Comparable<K>, V> implements Iterable<K> {
+public class BST<K extends Comparable<K>, V> implements Iterable<Map.Entry<K, V>> {
     private Node root;
     private int size; // Variable to store the size of the BST
 
@@ -18,7 +20,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
         }
     }
 
-    //Creating put() method
+    // Creating put() method
     public void put(K key, V value) {
         // Call the recursive helper method to perform insertion
         root = putRecursive(root, key, value);
@@ -49,7 +51,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
         return currentNode;
     }
 
-    //Creating get() method
+    // Creating get() method
     public V get(K key) {
         return getRecursive(root, key);
     }
@@ -74,7 +76,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
         }
     }
 
-    //Creating delete() method
+    // Creating delete() method
     public void delete(K key) {
         root = deleteRecursive(root, key);
     }
@@ -121,7 +123,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
         return currentNode;
     }
 
-    //Creating findMin method
+    // Creating findMin method
     private Node findMin(Node node) {
         // Find the minimum key in a subtree rooted at the given node
         while (node.left != null) {
@@ -141,7 +143,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
     }
 
     // Iterator implementation
-    private class BSTIterator implements Iterator<K> {
+    private class BSTIterator implements Iterator<Map.Entry<K, V>> {
         private Node currentNode;
         private Stack<Node> stack;
 
@@ -157,10 +159,10 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
         }
 
         @Override
-        public K next() {
+        public Map.Entry<K, V> next() {
             Node node = stack.pop();
             updateStack(node.right);
-            return node.key;
+            return new SimpleEntry<>(node.key, node.value);
         }
 
         // Helper method to update the stack with nodes in the left subtree
@@ -173,7 +175,7 @@ public class BST<K extends Comparable<K>, V> implements Iterable<K> {
     }
 
     @Override
-    public Iterator<K> iterator() {
+    public Iterator<Map.Entry<K, V>> iterator() {
         return new BSTIterator();
     }
 
